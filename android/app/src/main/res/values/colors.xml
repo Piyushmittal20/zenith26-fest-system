@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="slate_950">#020617</color>
+    <color name="slate_900">#0F172A</color>
+    <color name="slate_800">#1E293B</color>
+    <color name="slate_700">#334155</color>
+    <color name="slate_400">#94A3B8</color>
+    <color name="slate_300">#CBD5E1</color>
+    <color name="slate_100">#F1F5F9</color>
+    <color name="brand_purple_400">#C084FC</color>
+    <color name="brand_purple_500">#8B5CF6</color>
+    <color name="brand_purple_600">#7C3AED</color>
+    <color name="brand_purple_700">#6D28D9</color>
+    <color name="rose_950">#4C0519</color>
+    <color name="rose_400">#FB7185</color>
+    <color name="emerald_950">#022C22</color>
+    <color name="emerald_400">#34D399</color>
+    <color name="amber_950">#451A03</color>
+    <color name="amber_400">#FBBF24</color>
+</resources>
