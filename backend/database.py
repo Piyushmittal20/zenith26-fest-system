@@ -1,9 +1,22 @@
+import os
+import shutil
 import sqlite3
 from pathlib import Path
 
 # Resolve database path relative to project root
 BASE_DIR = Path(__file__).resolve().parent.parent
-DB_PATH = BASE_DIR / "fest.db"
+
+# In Vercel serverless environment, files outside /tmp are read-only
+if os.environ.get("VERCEL"):
+    DB_PATH = Path("/tmp/fest.db")
+    source_db = BASE_DIR / "fest.db"
+    if not DB_PATH.exists() and source_db.exists():
+        try:
+            shutil.copy2(source_db, DB_PATH)
+        except Exception as e:
+            print(f"Notice: could not copy fest.db to /tmp: {e}")
+else:
+    DB_PATH = BASE_DIR / "fest.db"
 
 
 def get_db_connection():
